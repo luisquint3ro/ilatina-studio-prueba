@@ -454,3 +454,76 @@ footer img{height:36px}
   .logo{width:170px;height:92px;border-radius:20px;padding:16px 22px}.logo img{max-height:50px}
   .fila-m .pista{gap:12px;padding-right:12px}
 }
+
+/* ================= v5 ================= */
+/* servicios sin número: la etiqueta NUEVO va arriba del título */
+.scard .stx .nuevo{display:inline-block;position:static;margin:0 0 6px}
+.scard.ext .ir{border-color:rgba(247,168,35,.4)}
+.scard.ext:hover .ir{background:var(--naranja);border-color:var(--naranja);color:var(--tinta)}
+
+/* logo de iLatina Radio dentro del bloque */
+.viz{flex-direction:column}
+.viz canvas{position:absolute;inset:0;opacity:.55}
+.logo-radio{position:relative;z-index:2;border:0;background:none;padding:0;display:grid;place-items:center;gap:14px;color:#fff;cursor:pointer}
+.logo-radio img{width:190px;height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.55));transition:transform .15s linear}
+.logo-radio:hover img{transform:scale(1.05)}
+.logo-radio .aro{position:absolute;left:50%;top:44%;width:210px;height:210px;margin:-105px 0 0 -105px;border-radius:50%;border:1.5px solid rgba(0,177,242,.35);animation:aro 3.2s ease-out infinite;pointer-events:none}
+.logo-radio .aro.a2{animation-delay:1.6s;border-color:rgba(247,168,35,.35)}
+@keyframes aro{from{transform:scale(.7);opacity:.9}to{transform:scale(1.45);opacity:0}}
+.vivo-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.18em;padding:7px 13px;border-radius:99px;background:rgba(10,17,24,.7);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px)}
+.vivo-tag .punto{width:8px;height:8px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 0 0 rgba(255,59,59,.6);animation:latido 1.6s infinite}
+@keyframes latido{70%{box-shadow:0 0 0 9px rgba(255,59,59,0)}100%{box-shadow:0 0 0 0 rgba(255,59,59,0)}}
+.radio .viz{height:290px}
+
+/* logos de marcas: lienzo 600×300 dentro de cada tarjeta */
+.logo{padding:14px 20px}
+.logo img{width:100%;height:100%;max-height:none}
+a.logo{cursor:pointer}
+a.logo:after{content:"↗";position:absolute;right:12px;top:9px;font-size:12px;opacity:0;transition:opacity .3s}
+.logo{position:relative}
+a.logo:hover:after{opacity:.8}
+
+/* redes sociales */
+.redes-s{padding:0 0 110px}
+.redes-cab{text-align:center;margin-bottom:36px}
+.redes-cab .eti{justify-content:center}
+.redes-cab h2{margin-top:14px;font-size:clamp(42px,5vw,72px)}
+.redes-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.red{--c:var(--azul);position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:20px;border-radius:24px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border:1px solid var(--linea);overflow:hidden;isolation:isolate;transition:transform .5s var(--ease),border-color .4s}
+.red:before{content:"";position:absolute;inset:0;z-index:-1;background:var(--c);opacity:0;transition:opacity .45s}
+.red:hover{transform:translateY(-6px);border-color:var(--c)}
+.red:hover:before{opacity:.16}
+.ri{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--c);color:#fff;transition:transform .5s var(--ease)}
+.red:hover .ri{transform:rotate(-8deg) scale(1.06)}
+.ri svg{width:26px;height:26px}
+.rt b{display:block;font-size:16px}
+.rt small{color:var(--suave);font-size:12.5px}
+.rf{position:absolute;right:16px;top:16px;color:var(--suave);transition:transform .4s var(--ease)}
+.red:hover .rf{transform:translate(3px,-3px);color:#fff}
+.red-facebook{--c:#1877f2}.red-instagram{--c:#e1306c}.red-youtube{--c:#ff0033}.red-tiktok{--c:#25f4ee}.red-tiktok .ri{color:#0a1118}.red-whatsapp{--c:#25d366}.red-spotify{--c:#1db954}
+.red-instagram .ri{background:radial-gradient(circle at 30% 110%,#fdf497 0,#fd5949 40%,#d6249f 65%,#285aeb 100%)}
+.red.vacia{opacity:.4;border-style:dashed}
+
+/* pie */
+footer img{height:40px}
+.redes a svg{width:17px;height:17px}
+
+/* botón flotante de WhatsApp */
+.wa-flot{position:fixed;right:22px;bottom:22px;z-index:46;display:flex;align-items:center;gap:10px;filter:drop-shadow(0 14px 30px rgba(0,0,0,.4))}
+.wa-ic{width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;transition:transform .4s var(--ease);position:relative}
+.wa-ic:before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:aro 2.4s ease-out infinite}
+.wa-ic svg{width:30px;height:30px}
+.wa-flot:hover .wa-ic{transform:scale(1.08) rotate(-6deg)}
+.wa-tx{background:#fff;color:var(--tinta);font-size:14px;font-weight:700;padding:10px 16px;border-radius:99px;opacity:0;transform:translateX(10px);transition:all .4s var(--ease);pointer-events:none;white-space:nowrap}
+.wa-flot:hover .wa-tx{opacity:1;transform:none}
+
+@media (max-width:1100px){.redes-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:860px){
+  .redes-s{padding:0 0 80px}
+  .redes-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .red{padding:16px;gap:12px;border-radius:20px}.ri{width:44px;height:44px;border-radius:14px}.ri svg{width:22px;height:22px}
+  .logo{padding:10px 14px}
+  .radio .viz{height:230px}.logo-radio img{width:150px}.logo-radio .aro{width:170px;height:170px;margin:-85px 0 0 -85px}
+  .wa-flot{right:14px;bottom:96px}.wa-ic{width:54px;height:54px}.wa-ic svg{width:27px;height:27px}
+  .wa-tx{display:none}
+}
