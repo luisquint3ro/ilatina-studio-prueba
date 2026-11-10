@@ -540,3 +540,12 @@ footer img{height:40px}
   .red{width:calc((100% - 48px)/5);max-width:84px;height:auto;aspect-ratio:1;border-radius:22px}
   .red .ri{width:46px;height:46px;border-radius:15px}.red .ri svg{width:24px;height:24px}
 }
+
+/* v7: iconos de redes un poco más pequeños */
+.red{width:96px;height:96px;border-radius:26px}
+.red .ri{width:56px;height:56px;border-radius:18px}
+.red .ri svg{width:29px;height:29px}
+@media (max-width:860px){
+  .red{max-width:72px;border-radius:20px}
+  .red .ri{width:40px;height:40px;border-radius:13px}.red .ri svg{width:21px;height:21px}
+}
