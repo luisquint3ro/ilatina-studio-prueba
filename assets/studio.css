@@ -113,7 +113,8 @@ section{position:relative}
 .cifra{padding:6px 28px;border-left:1px solid var(--linea)}.cifra:first-child{border-left:0;padding-left:0}
 .cifra b{display:block;font-family:'Bebas Neue';font-weight:400;font-size:76px;line-height:1;background:linear-gradient(180deg,#fff,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
 .cifra b em{font-style:normal;color:var(--naranja);-webkit-text-fill-color:var(--naranja)}
-.cifra span{font-size:14.5px;color:var(--suave)}
+.cifra>span{display:block;font-size:14.5px;color:var(--suave)}
+.cifra b .cont{font-size:inherit;color:inherit}
 
 /* servicios: lista con vista previa */
 .serv{padding:110px 0}
