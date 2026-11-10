@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="es"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iLatina Studio | Apps, radio online, podcast y contenido digital</title>
+<meta name="description" content="iLatina Studio crea apps para radios e iglesias, radios online, podcasts, páginas web y estrategia de contenido. Casa de iLatina Radio y el podcast La Cabina.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--azul:#00b1f2;--azul2:#0089c2;--naranja:#f7a823;--tinta:#0a1118;--tinta2:#111b26;--tinta3:#17222f;--linea:rgba(255,255,255,.09);--texto:#e9eef4;--suave:rgba(233,238,244,.66);--claro:#f5f5f7;--gris:#4b5563}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,sans-serif;background:var(--tinta);color:var(--texto);-webkit-font-smoothing:antialiased;line-height:1.55}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 32px}
+.eti{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--azul)}
+h1,h2{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.005em}
+h1{font-size:104px;line-height:.92}h2{font-size:62px;line-height:.95}
+h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:15px 26px;border-radius:99px;background:var(--azul);color:#fff}
+.btn.linea{background:transparent;border:1.5px solid rgba(255,255,255,.28)}
+.btn.sm{padding:11px 20px;font-size:14px}
+.btn.osc{background:var(--tinta);color:#fff}
+section{padding:110px 0}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:9;background:rgba(10,17,24,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--linea)}
+.nav .wrap{display:flex;align-items:center;gap:34px;height:76px}
+.marca{display:flex;align-items:center;gap:12px}
+.marca img{height:42px}
+.marca span{font-size:12px;font-weight:800;letter-spacing:.32em;color:var(--naranja);border-left:1px solid var(--linea);padding-left:12px}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:14.5px;font-weight:500;color:var(--suave);margin-left:auto}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:90px 0 100px}
+.hero:before{content:"";position:absolute;width:900px;height:900px;right:-260px;top:-240px;background:radial-gradient(circle,rgba(0,177,242,.28),transparent 62%)}
+.hero:after{content:"";position:absolute;width:600px;height:600px;left:-260px;bottom:-320px;background:radial-gradient(circle,rgba(247,168,35,.16),transparent 65%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{margin:20px 0 24px}
+.hero h1 em{font-style:normal;color:var(--azul)}
+.hero p{font-size:19px;color:var(--suave);max-width:590px}
+.hero .acc{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.telefonos{position:relative;height:600px}
+.tel{position:absolute;width:262px;border-radius:44px;padding:9px;background:#1d2733;box-shadow:0 40px 90px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.08)}
+.tel img{border-radius:36px;width:100%}
+.tel.a{right:150px;top:10px;z-index:2}
+.tel.b{right:0;top:80px;transform:rotate(6deg);opacity:.9}
+.burbuja{position:absolute;z-index:3;left:-10px;bottom:70px;background:#fff;color:var(--tinta);border-radius:18px;padding:14px 18px;display:flex;gap:12px;align-items:center;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.burbuja i{width:10px;height:10px;border-radius:50%;background:#ff3b4a;box-shadow:0 0 0 5px rgba(255,59,74,.18)}
+.burbuja b{display:block;font-size:14px}.burbuja small{color:var(--gris);font-size:12.5px}
+
+/* franja */
+.franja{background:var(--tinta2);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:26px 0}
+.franja .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.franja span{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--suave)}
+.franja span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--naranja)}
+
+/* servicios */
+.cab{max-width:720px;margin-bottom:46px}.cab h2{margin-top:12px}
+.servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.serv .im{height:170px}.serv .tx{padding:20px 22px 24px}.serv p{font-size:14.5px}
+.serv.nuevo .n:after{content:"NUEVO";font-family:Inter;font-size:10px;font-weight:800;letter-spacing:.12em;background:var(--naranja);color:var(--tinta);padding:3px 7px;border-radius:6px;margin-left:10px;vertical-align:middle}
+.serv{background:var(--tinta2);border:1px solid var(--linea);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.serv .im{height:190px;position:relative;overflow:hidden;background:var(--tinta3)}
+.serv .im img{width:100%;height:100%;object-fit:cover}
+.serv .im:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(17,27,38,.9))}
+.serv .tx{padding:22px 26px 28px}
+.serv .n{font-family:'Bebas Neue';font-size:26px;color:var(--naranja);line-height:1}
+.serv h3{margin:6px 0 8px}
+.serv p{font-size:15px;color:var(--suave)}
+.onda{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#0a3a52,#0a1118)}
+.onda i{width:5px;border-radius:5px;background:var(--azul)}
+.onda i:nth-child(3n){background:var(--naranja)}
+
+/* apps */
+.apps{background:var(--claro);color:var(--tinta)}
+.apps .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.apps .eti{color:var(--azul2)}
+.apps h2{margin:12px 0 18px}
+.apps .lead{font-size:18px;color:var(--gris)}
+.lista{list-style:none;margin:26px 0 30px;display:grid;gap:12px}
+.lista li{display:flex;gap:12px;align-items:center;font-size:16px;font-weight:500}
+.lista li:before{content:"✓";width:26px;height:26px;flex:none;border-radius:50%;background:rgba(0,177,242,.14);color:var(--azul2);display:grid;place-items:center;font-weight:800;font-size:13px}
+.proceso{background:var(--tinta);color:#fff;border-radius:24px;padding:28px 30px}
+.proceso h3{margin-bottom:16px}
+.proceso div{display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--linea);font-size:15px}
+.proceso div b{font-family:'Bebas Neue';font-weight:400;font-size:24px;color:var(--naranja);line-height:1;width:26px}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.galeria .tel{position:relative;width:100%;border-radius:34px;padding:7px}
+.galeria .tel img{border-radius:28px}
+.galeria .tel:nth-child(2){margin-top:60px}
+.galeria small{display:block;text-align:center;margin-top:12px;font-weight:600;color:var(--gris);font-size:13.5px}
+
+/* radio + cabina */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bloque{border-radius:28px;overflow:hidden;position:relative;min-height:640px;display:flex;flex-direction:column;justify-content:flex-end;padding:40px}
+.bloque>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bloque .cnt{position:relative;z-index:2}
+.bloque h2{margin:10px 0 12px}
+.bloque p{font-size:16px;color:var(--suave);max-width:470px}
+.bloque .acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.radio{background:linear-gradient(160deg,#0d3346,#0a1118 70%);border:1px solid var(--linea)}
+.player{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.06);border:1px solid var(--linea);border-radius:20px;padding:16px;margin-bottom:auto}
+.player .cov{width:74px;height:74px;border-radius:16px;overflow:hidden;flex:none}
+.player .cov img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.player .pb{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-left:auto;flex:none}
+.player .pb:before{content:"";width:5px;height:18px;border-left:5px solid var(--tinta);border-right:5px solid var(--tinta);box-sizing:content-box;width:4px}
+.vivo{font-size:11.5px;font-weight:800;letter-spacing:.1em;color:var(--naranja)}
+.barras{display:flex;gap:3px;align-items:center;height:22px;margin-top:6px}
+.barras i{width:3px;border-radius:3px;background:var(--azul)}
+.cabina:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,24,0) 10%,rgba(10,17,24,.82) 42%,rgba(10,17,24,.98))}
+.cabina .eti{color:var(--naranja)}
+.mini{display:flex;gap:10px;margin-top:22px}
+.mini img{width:120px;height:68px;object-fit:cover;border-radius:10px;border:1px solid var(--linea)}
+
+/* planes */
+.planes{background:var(--tinta2)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.plan{background:var(--tinta);border:1px solid var(--linea);border-radius:22px;padding:28px;display:flex;flex-direction:column}
+.plan .tag{font-size:11.5px;font-weight:800;letter-spacing:.12em;color:var(--naranja)}
+.plan h3{margin:10px 0 4px}
+.plan .pr{font-family:'Bebas Neue';font-size:48px;line-height:1.05;margin:6px 0 10px}
+.plan .pr small{font-family:Inter;font-size:14px;color:var(--suave);font-weight:500}
+.plan p{font-size:14.5px;color:var(--suave);margin-bottom:22px}
+.plan .btn{margin-top:auto;justify-content:center}
+.plan.top{background:var(--azul);border-color:var(--azul);color:#fff;position:relative}
+.plan.top .tag{color:var(--tinta)}
+.plan.top p,.plan.top .pr small{color:rgba(255,255,255,.82)}
+.plan.top .btn{background:#fff;color:var(--tinta)}
+
+/* contacto */
+.contacto .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.contacto h2{margin:12px 0 18px}
+.datos{display:grid;gap:12px;margin-top:30px}
+.dato{display:flex;gap:14px;align-items:center;background:var(--tinta2);border:1px solid var(--linea);border-radius:16px;padding:16px 18px}
+.dato i{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-size:19px;background:rgba(0,177,242,.14)}
+.dato small{display:block;color:var(--suave);font-size:13px}
+.form{background:var(--tinta2);border:1px solid var(--linea);border-radius:26px;padding:34px}
+.form label{display:block;font-size:14px;font-weight:600;margin-bottom:16px}
+.inp{margin-top:8px;padding:15px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:var(--tinta);color:var(--suave);font-weight:400}
+.inp.sel{display:flex;justify-content:space-between;color:var(--texto)}
+.inp.area{height:110px}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .btn{width:100%;justify-content:center;padding:17px;margin-top:6px}
+
+.vivob{background:transparent;border:1.5px solid var(--naranja);color:var(--naranja);cursor:pointer;font-family:inherit}
+.nav .acc2{display:flex;gap:10px;align-items:center}
+/* clientes */
+.clientes .cab{max-width:700px;margin-bottom:36px}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chips span{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:13px 22px;font-weight:600;font-size:15.5px;background:var(--tinta2)}
+.chips span img{height:22px;width:auto;border-radius:4px;background:#fff;padding:2px 4px}
+.chips span.art{border-color:rgba(247,168,35,.5)}
+.chips span.art:before{content:"♪";color:var(--naranja);font-weight:800}
+.leyenda{margin-top:18px;font-size:13px;color:var(--suave)}.leyenda b{color:var(--naranja)}
+/* planes texto */
+.planes .intro{max-width:760px;color:var(--suave);font-size:17px;margin-top:14px}
+.aviso{display:flex;gap:14px;align-items:flex-start;max-width:760px;margin-top:16px;background:rgba(247,168,35,.1);border:1px solid rgba(247,168,35,.35);border-radius:16px;padding:16px 18px;font-size:14.5px;color:var(--texto)}
+.aviso:before{content:"i";flex:none;width:24px;height:24px;border-radius:50%;background:var(--naranja);color:var(--tinta);font-weight:800;display:grid;place-items:center;font-size:13px}
+.aviso a{color:var(--naranja);font-weight:700;text-decoration:underline}
+.plan .gratis{display:block;margin-top:8px;color:var(--naranja);font-weight:700}
+.nota{margin-top:22px;font-size:13.5px;color:var(--suave);max-width:760px}
+/* opciones formulario */
+.opc{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opc span{font-size:13px;font-weight:600;padding:8px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.14);color:var(--suave)}
+.opc span.on{background:var(--azul);border-color:var(--azul);color:#fff}
+/* reproductor flotante */
+.flot{position:fixed;left:16px;right:16px;bottom:16px;z-index:20;max-width:540px;margin:0 auto;background:rgba(17,27,38,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:9px 12px 9px 9px;display:flex;align-items:center;gap:14px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.flot .js-play{width:52px;height:52px;flex:none;border-radius:50%;border:0;background:var(--azul);color:#fff;font-size:19px;cursor:pointer}
+.flot .cv{width:44px;height:44px;border-radius:12px;overflow:hidden;flex:none}.flot .cv img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.flot .tx{display:flex;flex-direction:column;min-width:0;flex:1;line-height:1.25}
+.flot .tx b{font-size:15px}.flot #np{font-size:12.5px;color:var(--suave);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.flot .eq{display:flex;gap:3px;align-items:flex-end;height:22px;margin-right:6px}.flot .eq i{width:3px;background:var(--naranja);border-radius:2px;height:30%}
+.flot.on .eq i{animation:eq .9s ease-in-out infinite}.flot .eq i:nth-child(2){animation-delay:.2s}.flot .eq i:nth-child(3){animation-delay:.4s}.flot .eq i:nth-child(4){animation-delay:.1s}
+@keyframes eq{0%,100%{height:25%}50%{height:100%}}
+footer{padding-bottom:110px!important;border-top:1px solid var(--linea);padding:40px 0;color:var(--suave);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:34px}
+
+@media (max-width:1100px){.servicios{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .nav .wrap{height:62px;gap:10px}.nav ul{display:none}.nav .btn{margin-left:auto}.marca img{height:34px}.marca span{font-size:10px;letter-spacing:.22em}
+  h1{font-size:60px}h2{font-size:44px}
+  section{padding:70px 0}
+  .hero{padding:50px 0 60px}.hero .wrap,.apps .wrap,.duo,.contacto .wrap{grid-template-columns:1fr}
+  .hero p{font-size:17px}
+  .telefonos{height:470px}.tel{width:210px}.tel.a{right:auto;left:0}.tel.b{right:0;top:60px}.burbuja{left:auto;right:0;bottom:10px}
+  .franja .wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px}.franja span{font-size:13.5px}
+  .servicios,.grid4{grid-template-columns:1fr}.nav .vivob{display:none}.chips span{font-size:14px;padding:11px 16px}.flot{border-radius:22px}
+  .galeria{gap:10px}
+  .bloque{min-height:460px;padding:26px}
+  .dos{grid-template-columns:1fr}
+  .form{padding:22px}
+  .player{gap:12px;padding:12px}.player .cov{width:56px;height:56px}.player .pb{width:42px;height:42px}.barras i:nth-child(n+18){display:none}
+  .radio .player{margin-bottom:30px}.cabina{padding-top:300px}.cabina>img{height:340px}
+  .cabina:after{background:linear-gradient(180deg,rgba(10,17,24,0) 120px,rgba(10,17,24,.96) 340px,var(--tinta))}
+  .mini img{width:31%;height:auto;aspect-ratio:16/9;flex:1}
+}
+</style></head><body>
+
+<nav class="nav"><div class="wrap">
+<a class="marca" href="#inicio"><img src="img/logo_oscuro.png" alt="iLatina"><span>STUDIO</span></a>
+<ul><li><a href="#servicios">Servicios</a></li><li><a href="#apps">Apps</a></li><li><a href="#radio">iLatina Radio</a></li><li><a href="#cabina">La Cabina</a></li><li><a href="#clientes">Clientes</a></li><li><a href="#planes">Planes</a></li></ul>
+<div class="acc2"><button type="button" class="btn sm vivob js-play">▶ En vivo</button><a class="btn sm" href="#contacto">Cotizar proyecto</a></div>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+<div>
+<span class="eti">Estudio digital · Orlando · Colombia</span>
+<h1>Creamos la <em>voz digital</em> de tu iglesia, marca o emisora.</h1>
+<p>Apps, radio online, podcast, páginas web y estrategia de contenido. Lo hacemos con la experiencia de operar nuestra propia radio digital, iLatina Radio, al aire las 24 horas.</p>
+<div class="acc"><a class="btn" href="#contacto">Agenda una reunión gratis</a><a class="btn linea" href="#servicios">Ver servicios</a></div>
+</div>
+<div class="telefonos">
+<div class="tel a"><img src="img/app/en_vivo.jpg" alt="App iLatina Radio — en vivo"></div>
+<div class="tel b"><img src="img/app/podcasts.jpg" alt="App iLatina Radio — podcasts"></div>
+<div class="burbuja"><i></i><div><b>Tu radio, en vivo</b><small>Así se vería tu app</small></div></div>
+</div>
+</div></header>
+
+<div class="franja"><div class="wrap">
+<span>Radio digital al aire 24/7</span><span>Podcast en Spotify y YouTube</span><span>Apps con CarPlay y Android Auto</span><span>Clientes en Estados Unidos y Colombia</span>
+</div></div>
+
+<section id="servicios"><div class="wrap">
+<div class="cab"><span class="eti">Servicios</span><h2>Todo lo que tu proyecto necesita para sonar, verse y crecer.</h2></div>
+<div class="servicios">
+<div class="serv"><div class="im"><img src="img/app/videos.jpg" style="object-position:center 18%"></div><div class="tx"><div class="n">01</div><h3>Apps para radios e iglesias</h3><p>Tu app propia en iOS y Android con streaming, videos, podcasts, Biblia y donaciones.</p></div></div>
+<div class="serv"><div class="im"><div class="onda" id="onda1"></div></div><div class="tx"><div class="n">02</div><h3>Crea tu propia radio</h3><p>Montamos tu emisora online: stream, programación, imagen sonora y reproductor web.</p></div></div>
+<div class="serv"><div class="im"><img src="img/rob2.jpg" style="object-position:center 30%"></div><div class="tx"><div class="n">03</div><h3>Producción de podcast</h3><p>Del concepto a Spotify y YouTube: guion, grabación, edición y portadas.</p></div></div>
+<div class="serv"><div class="im"><img src="img/globalminds.jpg"></div><div class="tx"><div class="n">04</div><h3>Producción radial y voice over</h3><p>Cuñas, jingles, cortinas y locución profesional. Voice over para comerciales, videos, documentales, audiolibros y redes sociales.</p></div></div>
+<div class="serv"><div class="im"><img src="img/jcr.jpg"></div><div class="tx"><div class="n">05</div><h3>Páginas web</h3><p>Sitios rápidos y listos para vender, con tu radio y tu contenido integrados.</p></div></div>
+<div class="serv"><div class="im"><img src="img/firstline2.jpg" style="object-position:center 35%"></div><div class="tx"><div class="n">06</div><h3>Estrategia y contenido</h3><p>Marca personal, redes sociales y contenido para iglesias, artistas y empresas.</p></div></div>
+<div class="serv nuevo"><div class="im"><img src="img/tayhana.jpg" style="object-position:center 30%"></div><div class="tx"><div class="n">07</div><h3>Estrategia digital para artistas emergentes</h3><p>Prensa y medios, página web, redes, lanzamientos, contenido y difusión en iLatina Radio y La Cabina.</p></div></div>
+<div class="serv nuevo"><div class="im"><img src="img/libro.jpg" style="object-position:center 28%"></div><div class="tx"><div class="n">08</div><h3>Escribe tu libro con nosotros</h3><p>Escritura, edición, portada y publicación en Amazon. Lo hicimos con nuestro propio libro, La Cabina.</p></div></div>
+</div></div></section>
+
+<section class="apps" id="apps"><div class="wrap">
+<div>
+<span class="eti">Desarrollo de apps</span>
+<h2>La misma app de iLatina Radio, con tu nombre y tus colores.</h2>
+<p class="lead">Lleva tu emisora, iglesia o ministerio al celular de tu comunidad. Nosotros la diseñamos, la publicamos y la mantenemos.</p>
+<ul class="lista"><li>Radio en vivo, videos y podcasts</li><li>Biblia con favoritos</li><li>Donaciones y pagos integrados</li><li>CarPlay, Android Auto y comandos de voz con Siri</li><li>Notificaciones push para tu audiencia</li></ul>
+<div class="proceso"><h3>Cómo trabajamos</h3>
+<div><b>1</b>Reunión y brief de tu proyecto</div><div><b>2</b>Diseñamos y configuramos tu app</div><div><b>3</b>Publicamos en App Store y Google Play</div><div><b>4</b>Soporte y actualizaciones cada mes</div></div>
+</div>
+<div class="galeria">
+<div><div class="tel"><img src="img/app/biblia.jpg" alt="Biblia"></div><small>Biblia</small></div>
+<div><div class="tel"><img src="img/app/en_vivo.jpg" alt="En vivo"></div><small>En vivo</small></div>
+<div><div class="tel"><img src="img/app/mas.jpg" alt="Donar y equipo"></div><small>Donaciones</small></div>
+</div>
+</div></section>
+
+<section><div class="wrap duo">
+<div class="bloque radio" id="radio">
+<div class="player"><div class="cov"><img src="img/app/en_vivo.jpg"></div><div><span class="vivo">● EN VIVO</span><h3 style="font-size:17px;margin-top:2px">iLatina Radio</h3><div class="barras" id="barras"></div></div><span class="pb"></span></div>
+<div class="cnt"><span class="eti">Nuestra radio digital</span><h2>iLatina Radio</h2>
+<p>Radio cristiana en español las 24 horas. Es nuestro laboratorio: todo lo que ofrecemos lo probamos primero aquí. También es una vitrina para tu marca con pauta, menciones y alianzas.</p>
+<div class="acc"><button type="button" class="btn js-play" style="border:0;cursor:pointer;font-family:inherit">▶ Escuchar en vivo</button><a class="btn linea" href="#contacto">Pautar en la radio</a></div></div>
+</div>
+<div class="bloque cabina" id="cabina"><img src="img/judith.jpg" style="object-position:center 12%">
+<div class="cnt"><span class="eti">Nuestro podcast</span><h2>La Cabina</h2>
+<p>Conversaciones con artistas, líderes y emprendedores desde la cabina de iLatina. Si quieres tu propio podcast, lo producimos contigo: guion, grabación, edición y publicación.</p>
+<div class="mini"><img src="img/rob.jpg"><img src="img/rob2.jpg"><img src="img/globalminds.jpg"></div>
+<div class="acc"><a class="btn" href="https://www.youtube.com/@ilatinaradio">Ver en YouTube</a><a class="btn linea" href="https://open.spotify.com/show/7D1IcJIOmCBuLYSZOc2mAf">Escuchar en Spotify</a></div></div>
+</div>
+</div></section>
+
+<section class="clientes" id="clientes"><div class="wrap">
+<div class="cab"><span class="eti">Clientes y aliados</span><h2>Marcas, artistas y proyectos que confían en nosotros.</h2></div>
+<div class="chips">
+<span>Asociación Glocal de Comunicadores</span>
+<span><img src="img/logos/Tauro.png" alt="">Tauro</span>
+<span>Firstline Cosmetics</span>
+<span><img src="img/logos/globalminds.png" alt="">Global Minds Miami</span>
+<span class="art">Gustavo Pimiento</span>
+<span>Proyecto de Vivienda Los Cortijos</span>
+<span>Conexión con el Cielo</span>
+<span>Juan Carlos Ramírez</span>
+<span class="art">Bola Corrales</span>
+<span class="art">Tayhana García</span>
+</div>
+<p class="leyenda"><b>♪</b> artistas · cada nombre puede llevar a su caso en el portafolio</p>
+</div></section>
+
+<section class="planes" id="planes"><div class="wrap">
+<div class="cab"><span class="eti">Planes de app</span><h2>Planes para crear tu app, sin sorpresas.</h2>
+<p class="intro">Una app hecha desde cero puede costar más de $50,000. Con nosotros tienes tu app profesional desde <b style="color:#fff">$129 al mes</b>, y el setup estándar es gratis con el plan anual.</p>
+<p class="aviso"><span>Estos planes son solo para el desarrollo de apps. Los demás servicios (radio online, podcast, producción radial y voice over, páginas web, estrategia, artistas y libros) se cotizan a la medida de tu proyecto. <a href="#contacto">Pide tu cotización</a>.</span></p></div>
+<div class="grid4">
+<div class="plan"><span class="tag">PAGO ÚNICO</span><h3>Setup estándar</h3><div class="pr">Desde $1,997</div><p>Tu marca en la app (ícono, colores, nombre), configuración del stream y publicación.<span class="gratis">Gratis si contratas un plan anual.</span></p><a class="btn linea sm" href="#contacto">Elegir</a></div>
+<div class="plan"><span class="tag">PAGO ÚNICO</span><h3>Setup avanzado</h3><div class="pr">Desde $3,500</div><p>Todo el estándar, más donaciones o pagos y contenido personalizado.</p><a class="btn linea sm" href="#contacto">Elegir</a></div>
+<div class="plan"><span class="tag">MENSUAL</span><h3>Plan Esencial</h3><div class="pr">$129<small> /mes</small></div><p>Radio en vivo, videos, podcasts, Biblia, actualizaciones y soporte por correo.</p><a class="btn linea sm" href="#contacto">Elegir</a></div>
+<div class="plan top"><span class="tag">MÁS POPULAR</span><h3>Plan Todo Incluido</h3><div class="pr">$299<small> /mes</small></div><p>Todo el Esencial, más CarPlay, Android Auto, Siri y notificaciones push.</p><a class="btn sm" href="#contacto">Elegir</a></div>
+</div>
+<p class="nota">Las cuentas de desarrollador de Apple ($99 al año) y Google Play ($25, pago único) van a nombre del cliente, así la app es 100% tuya. Te ayudamos a crearlas.</p>
+</div></section>
+
+<section class="contacto" id="contacto"><div class="wrap">
+<div><span class="eti">Hablemos</span><h2>Cuéntanos tu proyecto y te enviamos una propuesta.</h2>
+<div class="datos">
+<div class="dato"><i>✉️</i><div><b>info@ilatina.co</b><small>Escríbenos cuando quieras</small></div></div>
+<div class="dato"><i>💬</i><div><b>WhatsApp</b><small>Respuesta el mismo día</small></div></div>
+</div></div>
+<form class="form" action="mailto:info@ilatina.co" method="post" enctype="text/plain">
+<div class="dos"><label>Nombre<div class="inp">Tu nombre</div></label><label>Correo o WhatsApp<div class="inp">Para responderte</div></label></div>
+<label>¿Qué necesitas?<div class="opc"><span class="on">App para radio o iglesia</span><span>Crear mi radio online</span><span>Producción de podcast</span><span>Página web</span><span>Estrategia de contenido</span><span>Organización digital de artistas</span><span>Voice over</span><span>Escribir mi libro</span><span>Pauta en iLatina Radio</span></div></label>
+<label>Mensaje<div class="inp area">Cuéntanos un poco de tu proyecto…</div></label>
+<button class="btn" type="submit" style="border:0">Solicitar propuesta</button>
+</form>
+</div></section>
+
+<footer><div class="wrap"><img src="img/logo_oscuro.png" alt="iLatina"><span>© 2026 iLatina Studio · Casa de iLatina Radio y el podcast La Cabina</span><span>Facebook · Instagram · YouTube · TikTok</span></div></footer>
+
+<div class="flot" id="flot">
+<button type="button" class="js-play" aria-label="Reproducir iLatina Radio en vivo">▶</button>
+<div class="cv"><img src="img/app/en_vivo.jpg" alt=""></div>
+<div class="tx"><span class="vivo">● EN VIVO</span><b>iLatina Radio</b><span id="np">Radio cristiana 24/7</span></div>
+<div class="eq"><i></i><i></i><i></i><i></i></div>
+<audio id="radio" preload="none" src="https://stream.ilatina.co/listen/ilatina_radio/radio.mp3"></audio>
+</div>
+<script>
+(function(){var a=document.getElementById('radio'),f=document.getElementById('flot'),b=document.querySelectorAll('.js-play');
+function ui(on){f.classList.toggle('on',on);b.forEach(function(x){x.textContent=x.textContent.replace(on?'▶':'❚❚',on?'❚❚':'▶');});}
+b.forEach(function(x){x.addEventListener('click',function(){if(a.paused){a.play();ui(true);}else{a.pause();ui(false);}});});
+function np(){fetch('https://stream.ilatina.co/api/nowplaying/ilatina_radio').then(function(r){return r.json()}).then(function(d){var s=d.now_playing&&d.now_playing.song;if(s&&s.title)document.getElementById('np').textContent=(s.artist?s.artist+' — ':'')+s.title;}).catch(function(){});}
+np();setInterval(np,30000);})();
+function ondas(id,n,max,min){var e=document.getElementById(id);if(!e)return;var h='';for(var i=0;i<n;i++){h+='<i style="height:'+Math.round(min+max*Math.abs(Math.sin(i*.55)*Math.cos(i*.21)))+'px"></i>'}e.innerHTML=h}
+ondas('onda1',42,90,10);ondas('barras',30,18,4);
+</script>
+</body></html>
