@@ -49,16 +49,11 @@ if(!tactil&&!reduce){
   $$('.mag').forEach(function(b){b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})});
 }else{$('#luz').style.display='none'}
 
-/* servicios: tarjetas con luz que sigue al cursor y vista previa */
-var vista=$('#vista'),vi=$$('#vista img'),vx=0,vy=0,tx=0,ty=0;
+/* servicios: tarjetas con luz que sigue al cursor */
 $$('.scard').forEach(function(f){
-  f.addEventListener('mouseenter',function(){if(tactil||ED)return;vista.classList.add('on');vi.forEach(function(im,i){im.classList.toggle('on',i==f.dataset.img)})});
-  f.addEventListener('mouseleave',function(){vista.classList.remove('on')});
   f.addEventListener('mousemove',function(e){var r=f.getBoundingClientRect();f.style.setProperty('--mx',(e.clientX-r.left)+'px');f.style.setProperty('--my',(e.clientY-r.top)+'px')});
   f.addEventListener('click',function(){if(ED||f.tagName==='A')return;elegir(f.querySelector('h3').textContent);$('#contacto').scrollIntoView({behavior:reduce?'auto':'smooth'})});
 });
-addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY});
-(function loop(){vx+=(tx-vx)*.14;vy+=(ty-vy)*.14;vista.style.left=vx+'px';vista.style.top=vy+'px';requestAnimationFrame(loop)})();
 
 /* apps: botones que cambian el teléfono (avanza solo hasta que el visitante toca uno) */
 var pa=$$('#pantApp img'),chip=$('#chipApp'),chipBox=$('.chip-app'),halo=$('#halo'),telA=$('#telApp'),tabs=$$('#tabs .tab'),dets=$$('#detalle .det'),tabsBox=$('#tabs');
